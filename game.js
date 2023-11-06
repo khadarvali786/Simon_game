@@ -4,6 +4,15 @@ var gamePattern = [];
 var start=false;
 var level=0;
 
+$("#btn").click(function (){
+  if(!start){
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    start = true;
+    $("#btn").hide();
+  }
+});
+
 $(document).keypress(function (){
   if(!start){
     $("#level-title").text("Level " + level);
@@ -76,7 +85,7 @@ function checkAnswers(currentLevel){
     else{
       $("#level-title").text("Game Over your Score is "+level+" You can do it , Press Any Key to Restart");
     }
-    
+    $("#btn").show();
     startOver();
   }
 }
