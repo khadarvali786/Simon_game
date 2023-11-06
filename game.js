@@ -33,9 +33,6 @@ function nextSequence() {
 
   $("#"+randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-  // var a=new Audio("sounds/"+randomChosenColour+".mp3");
-  // a.play();
-
  playSound(randomChosenColour);
 
  level++;
